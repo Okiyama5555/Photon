@@ -3,10 +3,11 @@ using Photon.Realtime;
 using UnityEngine;
 
 // MonoBehaviourPunCallbacksを継承して、PUNのコールバックを受け取れるようにする
-public class JoinRoom : MonoBehaviourPunCallbacks
+public class ConnectSystem : MonoBehaviourPunCallbacks
 {
     private void Start()
     {
+        PhotonNetwork.NickName = "Player";
         // PhotonServerSettingsの設定内容を使ってマスターサーバーへ接続する
         PhotonNetwork.ConnectUsingSettings();
     }
